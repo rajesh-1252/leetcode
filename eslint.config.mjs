@@ -24,6 +24,16 @@ export default tseslint.config(
     // ESLint plugin for Jest
     {
         files: ['**/*.spec.ts'],
-        ...jestPlugin.configs['flat/recommended']
-    }
+        ...jestPlugin.configs['flat/recommended'],
+    },
+
+    // Custom rule configuration for unused variables
+    {
+        rules: {
+            '@typescript-eslint/no-unused-vars': 'off', // Change 'warn' to 'off' to disable, or customize behavior
+            'prefer-const': 'off',
+            for: 'off',
+            '@typescript-eslint/prefer-for-of': 'off',
+        },
+    },
 );

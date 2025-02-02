@@ -1,9 +1,12 @@
 {
   "compilerOptions": {
-    "lib": ["es2018"],
+    "lib": [
+      "es2018"
+    ],
     "target": "es2018",
     "module": "commonjs",
     "moduleResolution": "node",
+    "isolatedModules": true,
     "outDir": "./build",
     "emitDecoratorMetadata": true,
     "experimentalDecorators": true,
@@ -14,6 +17,7 @@
   "include": [
     "src/**/*.ts",
     "index.js",
+    "tests/1d.array/bfs/1.test.ts",
   ],
   "exclude": [
     "node_modules"
